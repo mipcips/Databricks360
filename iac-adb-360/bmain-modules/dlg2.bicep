@@ -4,8 +4,9 @@ param location string
 param uamipid string
 param lawid string
 param tag string
+param locationshort string
 
-var tempdlgname = 'dlg2${env}${location}${baseName}'
+var tempdlgname = 'dlg2${env}${locationshort}${baseName}'
 var curatedDlgName = substring('${substring(tempdlgname, 0, 20)}${uniqueString(tempdlgname)}', 0, 24)
 var tempmetastorename = 'dlg2metastore${env}${location}${baseName}'
 var curatedMetaStorename = substring('${substring(tempmetastorename, 0, 20)}${uniqueString(tempmetastorename)}', 0, 24)

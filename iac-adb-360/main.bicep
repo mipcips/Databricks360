@@ -43,6 +43,7 @@ module dlg2 'bmain-modules/dlg2.bicep'={
     uamipid: uami.outputs.adbacpid
     lawid: law.outputs.lawid
     tag: tag
+    locationshort: locationshortstring
   }
 }
 
