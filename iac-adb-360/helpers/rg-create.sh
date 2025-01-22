@@ -2,7 +2,7 @@
 
 solutionname='adb360'
 location='westus2'
-subscriptionid='<subscriptionid>'
+subscriptionid='2865292f-c1ed-4867-a66d-337eae300421'
 serviceprincipalname='devops-sc'
 adbinteractprincipalname='adb360-sp'
 locationshortname='wus2'
@@ -27,7 +27,7 @@ erg=$(az group list --query "[?name=='$rgDev'].name" -o tsv)
 if [ -z "$erg" ] 
     then 
         echo 'resourcegroup does not exist, create it'
-        az group create -n $rgDev -l $location
+        az group create -n $rgDev -l $location --tags solution=mysolution env=dev 
         az role assignment create --role 'Contributor' --assignee $serviceprincipaloid --scope "/subscriptions/$subscriptionid/resourceGroups/$rgDev"
         az role assignment create --role 'Contributor' --assignee $adbspoid --scope "/subscriptions/$subscriptionid/resourceGroups/$rgDev"
         az role assignment create --role 'User Access Administrator' --assignee $serviceprincipaloid --scope "/subscriptions/$subscriptionid/resourceGroups/$rgDev"
