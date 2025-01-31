@@ -1,8 +1,8 @@
 #!/bin/bash
 
-solutionname='adbsccstd'
+solutionname='adbscc'
 location='westus2'
-subscriptionid='3d11a8f9-16c2-438e-bbed-3b23505340ec'
+subscriptionid='2865292f-c1ed-4867-a66d-337eae300421'
 serviceprincipalname='devops-sc'
 adbinteractprincipalname='adb360-sp'
 locationshortname='wus2'

@@ -1,5 +1,5 @@
 variables:
-  baseName: adbsccstd0419
+  baseName: adbscc0131
   env: dev
   resourcegroup: rg-wus2-$(baseName)-dev
   vnetresourcegroup: rg-wus2-$(baseName)-net-dev
