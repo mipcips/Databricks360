@@ -124,7 +124,7 @@ stages:
       #     displayName: waitfor6
 
       - deployment: DeployJobTransit
-        dependsOn: DelayWorkflow
+        dependsOn: DeployJobmain
         condition: succeeded()
         displayName: Deploy Transit to dev environment
         environment: dev
