@@ -113,15 +113,15 @@ stages:
                     inlineScript: 'az deployment group create --resource-group $(resourcegroup) --template-file ./iac-adb-360/1_bmainscc.bicep --parameters baseName=$(baseName)  env=$(env) location=$(location) vnetResourceGroup=$(vnetresourcegroup) vnetName=$(vnetname)'
 
 
-      - job: DelayWorkflow
-        dependsOn: DeployJobmain
-        condition: succeeded()
-        steps:
-        - task: Bash@3
-          inputs:
-            targetType: 'inline'
-            script: 'sleep 6m'
-          displayName: waitfor6
+      # - job: DelayWorkflow
+      #   dependsOn: DeployJobmain
+      #   condition: succeeded()
+      #   steps:
+      #   - task: Bash@3
+      #     inputs:
+      #       targetType: 'inline'
+      #       script: 'sleep 6m'
+      #     displayName: waitfor6
 
       - deployment: DeployJobTransit
         dependsOn: DelayWorkflow
